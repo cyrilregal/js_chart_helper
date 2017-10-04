@@ -60,7 +60,9 @@ function graph_helper() {
 		var min_value = 0;
 		var save_value = 0;
 		
-	    $.each(graph_value, function(index, value) {
+		for(index in graph_value) {
+			
+			var value = graph_value[index];
 	    	
 			current_value = value[1];
 			
@@ -69,7 +71,7 @@ function graph_helper() {
 			}
 
 			save_value = current_value;
-	    });
+	    }
 	    
 	    return min_value;
 	}
